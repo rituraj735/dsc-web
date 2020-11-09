@@ -188,7 +188,7 @@ animation: 1s ease-out 0s 1 slideInFromDown;
 }
 
 .team-cards-container{
---bs-gutter-x: 1.5rem;
+--bs-gutter-x: 3rem;
 width: 100%;
 padding-right: calc(var(--bs-gutter-x) / 2);
 padding-left: calc(var(--bs-gutter-x) / 2);
@@ -209,12 +209,17 @@ margin-left: auto;
   padding: 0 !important;
 }
 
+.MuiStepLabel-iconContainer {
+    padding-right: 0px !important;
+}
+
 @media only screen and (min-width: 600px) {
   .sticky-top{
     position: fixed;
     top: 35vh;
     display: block;
     align-self: flex-start;
+    padding-right:5rem;
   }
 
   .main-image{
@@ -222,6 +227,17 @@ margin-left: auto;
   }
 
 }
+
+@media only screen and (max-height: 500px) {
+  .sticky-top{
+    position: fixed;
+    top: 20vh;
+    display: block;
+    align-self: flex-start;
+    padding-right:5rem;
+  }
+}
+
 @media only screen and (max-width: 600px) {
   .team-content-order{
     order: 2;
@@ -285,9 +301,10 @@ max-width: 16rem;
 }
 
 .team-card-row .flip-card-back .card-body {
-min-height: 32rem;
+min-height: 35rem;
 width: 16rem;
 }
+
 
 .read-more {
 cursor: pointer;
@@ -329,11 +346,11 @@ background-color: #EA4335 !important;
 }
 
 .organisational .flip-card-front .card-body {
-background-color: #FBBC04 !important;
+background-color: #FEEFC3 !important;
 }
 
 .organisational .flip-card-back .card-body {
-background-color: #FEEFC3 !important;
+background-color: #FBBC04 !important;
 }
 
 /*Dark Mode*/
@@ -368,13 +385,22 @@ background-color: #FAD2CF !important;
 color: #000 !important;
 }
 
-.organisational .flip-card-front .card-body {
+.dark .organisational .flip-card-front .card-body {
 background-color: #FBBC04 !important;
 }
 
-.organisational .flip-card-back .card-body {
+.dark .organisational .flip-card-back .card-body {
 background-color: #FEEFC3 !important;
 color: #000 !important;
+}
+
+/*Stepper*/
+.MuiStepIcon-root.MuiStepIcon-completed {
+    color: #EA4335 !important;
+}
+
+.MuiStepIcon-root.MuiStepIcon-active {
+    color: #FBBC04 !important;
 }
 
 /*Card and Card Flip*/
@@ -397,7 +423,7 @@ border-radius: 0.25rem;
 .flip-card .card-body {
 -ms-flex: 1 1 auto;
 flex: 1 1 auto;
-min-height: 1px;
+min-height: 19rem;
 padding: 1.25rem;
 }
 
@@ -442,139 +468,4 @@ transform: rotateX(0deg);
 
 .flip-card-back {
 transform: rotateY(-180deg);
-}
-
-
-/*Sidebar*/
-
-.bm-item {
-display: inline-block;
-
-/* Our sidebar item styling */
-text-decoration: none;
-margin-bottom: 10px;
-color: #d1d1d1;
-transition: color 0.2s;
-}
-
-.bm-item:hover {
-color: white;
-}
-
-.bm-burger-button {
-width: 36px;
-height: 30px;
-position: fixed;
-top: 50%;
-right: 0px;
-}
-
-/* Color/shape of burger icon bars */
-.bm-burger-bars {
-background: #373a47;
-}
-
-/* Position and sizing of clickable cross button */
-.bm-cross-button {
-height: 24px;
-width: 24px;
-}
-
-/* Color/shape of close button cross */
-.bm-cross {
-background: #bdc3c7;
-}
-
-/* General sidebar styles */
-.bm-menu {
-background: #fff !important;
-color: #000;
-padding: 2.5em 1.5em 0;
-font-size: 1.15em;
-}
-
-.dark .bm-menu {
-background: #000 !important;
-color: #fff;
-padding: 2.5em 1.5em 0;
-font-size: 1.15em;
-}
-
-/* Morph shape necessary with bubble or elastic */
-.bm-morph-shape {
-fill: #373a47;
-}
-
-/* Wrapper for item list */
-.bm-item-list {
-color: #b8b7ad;
-}
-
-/* Styling of overlay */
-.bm-overlay {
-background: rgba(0, 0, 0, 0.3);
-}
-
-/*Sidebar*/
-
-
-
-.bm-item {
-  display: inline-block;
-
-  /* Our sidebar item styling */
-  text-decoration: none;
-  margin-bottom: 10px;
-  color: #d1d1d1;
-  transition: color 0.2s;
-}
-
-.bm-item:hover {
-  color: white;
-}
-
-.bm-burger-button {
-  width: 36px;
-  height: 30px;
-  position: fixed;
-  top: 50%;
-  right: 0px;
-}
-
-/* Color/shape of burger icon bars */
-.bm-burger-bars {
-  background: #373a47;
-}
-
-/* Position and sizing of clickable cross button */
-.bm-cross-button {
-  height: 24px;
-  width: 24px;
-}
-
-/* Color/shape of close button cross */
-.bm-cross {
-  background: #bdc3c7;
-}
-
-/* General sidebar styles */
-.bm-menu {
-  background: #000;
-  padding: 2.5em 1.5em 0;
-  font-size: 1.15em;
-}
-
-/* Morph shape necessary with bubble or elastic */
-.bm-morph-shape {
-  fill: #373a47;
-}
-
-/* Wrapper for item list */
-.bm-item-list {
-  color: #b8b7ad;
-}
-
-/* Styling of overlay */
-.bm-overlay {
-  background: rgba(0, 0, 0, 0.3);
 }
